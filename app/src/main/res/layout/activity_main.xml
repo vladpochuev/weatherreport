@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pitbull_black"
+    tools:context=".MainActivity">
+
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:src="@drawable/testy" />
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50sp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="@string/logo"
+        android:textAlignment="center"
+        android:textColor="@color/logo_text_color"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/user_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:backgroundTint="@color/backgroundTint"
+        android:layout_marginTop="100sp"
+        android:layout_marginHorizontal="50sp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/textColorHint"
+        android:hint="@string/hint_user_field" />
+
+    <Button
+        android:id="@+id/main_btn"
+        android:fontFamily="@font/montserrat_bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_field"
+        android:layout_marginTop="23sp"
+        android:layout_marginHorizontal="130sp"
+        android:backgroundTint="@color/main_btn"
+        android:text="@string/main_btn"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/result_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_bold"
+        android:textAlignment="center"
+        android:layout_below="@id/main_btn"
+        android:layout_marginTop="50sp"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+</RelativeLayout>
