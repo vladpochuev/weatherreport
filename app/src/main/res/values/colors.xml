@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="pitbull_black">#252525</color>
-    <color name="logo_text_color">#29A89A</color>
+    <color name="logo_text_color">#020202</color>
     <color name="backgroundTint">#009688</color>
     <color name="textColorHint">#ccc</color>
     <color name="main_btn">#A9F8EF</color>
     <color name="result_text">#99000000</color>
+    <color name="logo_background">#80A9F8EF</color>
+    <color name="result_background">#95333333</color>
+    <color name="user_field_tint">#90ffffff</color>
 </resources>

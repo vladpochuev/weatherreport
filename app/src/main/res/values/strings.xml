@@ -4,4 +4,8 @@
     <string name="hint_user_field">Введите город</string>
     <string name="main_btn">Узнать погоду</string>
     <string name="no_user_input">Введите текст</string>
+    <string name="waiting">Ожидайте…</string>
+    <string name="city_not_found">Город не найден</string>
+    <string name="try_later">Попробуйте позже</string>
+    <string name="server_error">Сервер не отвечает</string>
 </resources>
