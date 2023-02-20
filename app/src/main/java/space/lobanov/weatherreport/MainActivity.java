@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private Button main_btn;
     private TextView result_info_temp, result_info_weather;
     private ImageView icon;
-
+    private MediaPlayer app_theme;
     private int responseCode = 0;
 
 
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
         result_info_temp = findViewById(R.id.result_info_temp);
         result_info_weather = findViewById(R.id.result_info_weather);
         icon = findViewById(R.id.icon);
+        app_theme = MediaPlayer.create(this,R.raw.app_theme);
+
+        soundPlay(app_theme);
 
         main_btn.setOnClickListener(view -> {
             if(user_field.getText().toString().trim().equals("")){
@@ -67,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 bm.eraseColor(Color.TRANSPARENT);
                 icon.setImageBitmap(bm);
 
-                String city = user_field.getText().toString();
+                String city = user_field.getText().toString().trim();
                 String key = "205fcde27a17674e6802e322f472b29d";
                 String url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key + "&units=metric&lang=ru";
 
@@ -75,6 +79,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void soundPlay(MediaPlayer music) {
+        music.start();
+        music.setLooping(true);
+    }
+
     private class GetURLData extends AsyncTask<String,String,String>{
 
         @Override
@@ -167,5 +177,6 @@ public class MainActivity extends AppCompatActivity {
                 throw new RuntimeException(e);
             }
         }
+
     }
 }
